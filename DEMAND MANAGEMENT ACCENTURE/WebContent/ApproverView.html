@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>DEMAND MANAGEMENT</title>
+<link rel="stylesheet" href="DemandView.css" />
+</head>
+<body>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a  href="#">Profile</a>
+  <a onclick="approvalWorkflow()">Approval Workflows</a>
+  <a onclick="approvedWorkflow()" >Approved Workflows</a>
+  
+</div>
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "350px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+function approvalWorkflow(){
+	
+	window.location.replace("DemandApproval.html");
+}
+function approvedWorkflow(){
+	
+	window.location.replace("DemandApproved.html");
+}
+</script>
+   
+
+</body>
+</html>

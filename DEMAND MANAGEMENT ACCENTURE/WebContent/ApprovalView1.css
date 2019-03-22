@@ -1,0 +1,304 @@
+@charset "ISO-8859-1";
+
+body {
+  font-family: "Lato", sans-serif;
+}
+ body {
+  background: #76b852; fallback for old browsers
+  background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+  background: -moz-linear-gradient(right, #76b852, #8DC26F);
+  background: -o-linear-gradient(right, #76b852, #8DC26F);
+  background: linear-gradient(to left, #76b852, #8DC26F);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;      
+} 
+
+/*  body {
+    background-color: #fff;
+    margin: 10;
+    padding: 0;
+    font-family: 'Oxygen', sans-serif;
+    color: #444;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 300;
+}
+ 
+table.box {
+    
+    border-collapse: collapse;
+    border-spacing: 20;
+    background: #ffffff;
+    color: #61d850;
+    width: 80%;
+}
+
+table.box th, table.box td {
+    text-align: center;
+}
+
+table.box thead {
+    line-height: 12px;
+    background: #ffff00;
+    text-transform: uppercase;
+}
+
+table.box thead th {
+    color: #61d850;
+    padding: 10px;
+    letter-spacing: 1px;
+    vertical-align: bottom;
+}
+
+table.box thead th:nth-child(1) {
+    width: 20%;
+    text-align: left;
+    padding-left: 20px;
+}
+
+table.box thead th:nth-child(2) {
+    width: 30%;
+}
+
+table.box thead th:nth-child(3) {
+    width: 35%;
+}
+
+table.box thead th:nth-child(4) {
+    width: 15%;
+}
+
+table.box tbody {
+    font-size: 1em;
+    line-height: 15px;
+    overflow-y:auto;
+}
+
+table.box tbody tr {
+    border-top: 2px solid rgba(0, 255, 0, 0.3);
+    transition: background 0.6s, color 0.6s;
+}
+
+table.box tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+table.box tbody tr:hover {
+    color: #0080ff;
+    background: rgba(255, 255, 255, 0.7);
+    font-weight: 900;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+table.box tbody td {
+    padding: 12px;
+}
+
+table.box tbody tr:hover td:first-child {
+    background: rgba(0,0,0,0);
+}
+
+table.box tbody td:first-child {
+    text-align: left;
+    padding-left: 20px;
+    font-weight: 700;
+    background: rgba(0, 255, 0, 0.3);
+    transition: background 0.6s;
+}
+
+table.box tfoot {
+    font-size: 0.8em;
+}
+
+table.box tfoot tr {
+    border-top: 2px solid #2e63e7;
+}
+
+table.box tfoot td {
+    color: rgba(255,255,215,0.6);
+    text-align: left;
+    line-height: 15px;
+    padding: 15px 20px;
+} */
+
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+    overflow: auto;
+}
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 50rem;
+    height: 80%;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 5px 8px 0 rgba(0,0,0,0.2),0 5px 8px 0 rgba(0,0,0,0.2),0 5px 8px 0 rgba(0,0,0,0.2);
+    animation-name: modalOpen;
+    animation-duration: 2s;
+}
+.close-button {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+.close-button:hover {
+    background-color: darkgray;
+}
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+@keyframes modalOpen{
+	from {opacity: 0}
+	to {opacity: 1}
+}
+
+.modal-header
+{
+	background: #76b852;
+	padding: 15px;
+	color: #fff;
+	
+}
+
+.modalTitle{
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.modalDescription {
+	font-family: "Roboto", sans-serif;
+    background-color: #f2f2f2;
+    outline: 0;
+    border: 0;
+    height: 100px;
+    width: 100%;
+    margin: 0 0 15px;
+    padding: 15px;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+#styleDesc::-webkit-scrollbar {
+    width: 6px;
+    background-color: #f4f4f2;
+    cursor: pointer;
+} 
+#styleDesc::-webkit-scrollbar-thumb {
+    background-color: #76b852;
+    cursor: pointer;
+}
+
+.btnApp {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.btnApp:hover,.btnRej:active,.btnRej:focus {
+  background: #43A047;
+}
+
+.btnRej {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #FF0000;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.btnRej:hover,.btnRej:active,.btnRej:focus {
+  background: #8B0000;
+}
+
+.sidenav {
+  height: 100%;
+  width: 20%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 20px 10px 30px 50px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+  cursor: pointer;
+}
+
+.sidenav .trigger:hover {
+	color: #f1f1f1;
+	cursor: pointer;
+	
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
